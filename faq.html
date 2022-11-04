@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Jost&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <script src="https://telegram.org/js/telegram-web-app.js?1"></script>
+    <title>UmmaCrypto</title>
+</head>
+<body class="body">
+    <div class="box">
+        <div class="item">
+            <div class="item-text">
+                <h1 class="faq" style="font-size: 40px;">F.A.Q</h1>
+            </div>
+            <div class="animation">
+                <center><lottie-player src="https://assets1.lottiefiles.com/packages/lf20_wloxwco0.json"  background="transparent"  speed="1"  style="width: 240px; margin: auto;"  loop autoplay></lottie-player></center>
+            </div>
+            <!-- https://assets7.lottiefiles.com/packages/lf20_QPbPfUVWRe.json -->
+            <div class="faq-class" style="margin: auto;">
+                <ul style="list-style-type:none;">
+                    <li style="margin-bottom: 10px;">
+                        <a id='1' href="#">
+                            <div  style="display: flex; color: #fff;">
+                                <h6 style="margin:auto; margin-left: 0; margin-right: 5px; font-size: 12px;">Как это работает?</h6>
+                                <img src="img/arrow.svg" style="width:18px; margin: auto; margin-right: 20px;"/>
+                            </div>
+                        </a>
+                        <p id="11" style="display: none; font-size: 10px;">Примерно так и работает.</p> 
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a id='2' href="#">
+                            <div  style="display: flex; color: #fff;">
+                                <h6 style="margin:auto; margin-left: 0; margin-right: 5px; font-size: 12px;">Достаточно большой вопрос?</h6>
+                                <img src="img/arrow.svg" style="width:18px; margin: auto; margin-right: 20px;"/>
+                            </div>
+                        </a>
+                        <p id="21" style="display: none; font-size: 10px;">Ответ на большой вопрос.</p> 
+                    <li style="margin-bottom: 10px;">
+                        <a id='3' href="#">
+                            <div  style="display: flex; color: #fff;">
+                                <h6 style="margin:auto; margin-left: 0; margin-right: 5px; font-size: 12px;">Не такой частый вопрос?</h6>
+                                <img src="img/arrow.svg" style="width:18px; margin: auto; margin-right: 20px;"/>
+                            </div>
+                        </a>
+                        <p id="31" style="display: none; font-size: 10px;">Ответ на менее частый вопрос.</p> 
+                    </li>
+                </ul>  
+            </div>
+        </div>
+        <div class="viewport_border"></div>
+        <div class="viewport_stable_border"></div>
+    </div>
+    
+    <script src="https://webappcontent.telegram.org/js/jquery.min.js"></script>
+
+    <script>
+        Telegram.WebApp.ready();
+        let supBTN = document.getElementById("support_btn");
+        let slogan = document.getElementById("item-sl");
+
+        function round(val, d) {
+            var k = Math.pow(10, d || 0);
+            return Math.round(val * k) / k;
+        }
+
+        const screenHeight = window.screen.height
+
+        function setViewportData() {
+            $('.viewport_border').attr('text', window.innerWidth + ' x ' + round(Telegram.WebApp.viewportHeight, 2));
+            $('.viewport_stable_border').attr('text', window.innerWidth + ' x ' + round(Telegram.WebApp.viewportStableHeight, 2) + ' | is_expanded: ' + (Telegram.WebApp.isExpanded ? 'true' : 'false'));
+            // $('.body').attr('style', '' + (Telegram.WebApp.isExpanded ? "background-image: url(img/lightFull.png); background-size: 100% 120vh;" : "background-image: url(img/light.png);"));
+            // $('.box').attr('style', '' + (Telegram.WebApp.isExpanded ? 'padding-top: 50px;' : 'padding-top: 0;'));
+            // $('.animation').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 100px; margin-bottom: 50px;' : 'margin-top: 0px;'));
+
+            // if (screenHeight > 800){
+            //     $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 180px;' : 'margin-top: 0px;'));
+            // }
+            // else if (screenHeight > 760){
+            //     $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 120px;' : 'margin-top: 0px;'));
+            // }
+            // else {
+            //     $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 80px;' : 'margin-top: 0px;'));
+            // }
+            
+            
+        }
+
+        Telegram.WebApp.onEvent('viewportChanged', setViewportData);
+        setViewportData();
+
+        $( "#1" ).click(function() {
+            $( "#11" ).slideToggle( "fast" );
+        });
+        $( "#2" ).click(function() {
+            $( "#21" ).slideToggle( "fast" );
+        });
+        $( "#3" ).click(function() {
+            $( "#31" ).slideToggle( "fast" );
+        });
+
+    </script>
+</body>
+</html>
