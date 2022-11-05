@@ -44,6 +44,7 @@ h3 {
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     font-size: 30pt;
+    margin-top: 0;
 }
 
 .navBox {
