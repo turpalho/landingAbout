@@ -24,35 +24,34 @@
                 <center><lottie-player src="https://assets1.lottiefiles.com/packages/lf20_wloxwco0.json"  background="transparent"  speed="1"  style="width: 220px; margin: auto;"  loop autoplay></lottie-player></center>
             </div>
             <!-- https://assets7.lottiefiles.com/packages/lf20_QPbPfUVWRe.json -->
-            <div class="faq-class" style="margin: auto; max-width: 500px;">
-                <ul style="list-style-type:none;">
-                    <li style="margin-bottom: 15px;">
+            <div class="faq-class" style="margin: auto; margin-left: 20px; margin-right: 20px; max-width: 400px;">
+                    <div style="margin-bottom: 15px;">
                         <a id='1' href="#">
-                            <div  style="display: flex; color: #fff;">
-                                <h6 id="h61" style="margin:auto; margin-left: 0; margin-right: 5px; font-size: 15px;">Как это работает?</h6>
-                                <img src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 20px;"/>
+                            <div  style="display: flex; color: #fff; border: 1px solid rgba(170,62,166,0.719); border-radius: 10px;">
+                                <h6 id="h61" style="margin:auto; margin-left: 3px; font-size: 15px;">Как это работает?</h6>
+                                <img src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 3px;"/>
                             </div>
                         </a>
                         <p id="11" style="display: none; font-size: 12px; font-family: 'Jost', sans-serif; letter-spacing: 2px;">Примерно так и работает.</p> 
-                    </li>
-                    <li style="margin-bottom: 15px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
                         <a id='2' href="#">
-                            <div style="display: flex; color: #fff;">
-                                <h6 id="h62" style="margin:auto; margin-left: 0; margin-right: 5px; font-size: 15px;">Достаточно большой вопрос?</h6>
-                                <img src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 20px;"/>
+                            <div style="display: flex; color: #fff; border: 1px solid rgba(73, 175, 226, 0.719); border-radius: 10px;">
+                                <h6 id="h62" style="margin:auto; margin-left: 3px; font-size: 15px;">Достаточно большой вопрос?</h6>
+                                <img src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 3px;"/>
                             </div>
                         </a>
-                        <p id="21" style="display: none; font-size: 12px; font-family: 'Jost', sans-serif; letter-spacing: 2px;">Ответ на большой вопрос.</p> 
-                    <li>
+                        <p id="21" style="display: none; font-size: 12px; font-family: 'Jost', sans-serif; letter-spacing: 2px;">Ответ на большой вопрос.</p>
+                    </div>
+                    <div>
                         <a id='3' href="#">
-                            <div  style="display: flex; color: #fff;">
-                                <h6 id="h63" style="margin:auto; margin-left: 0; margin-right: 5px; font-size: 15px;">Не такой частый вопрос?</h6>
-                                <img src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 20px;"/>
+                            <div  style="display: flex; color: #fff; border: 1px solid rgba(59, 20, 202, 0.719); border-radius: 10px;">
+                                <h6 id="h63" style="margin:auto; margin-left: 3px; font-size: 15px;">Не такой частый вопрос?</h6>
+                                <img src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 3px;"/>
                             </div>
                         </a>
                         <p id="31" style="display: none; font-size: 12px; font-family: 'Jost', sans-serif; letter-spacing: 2px;">Ответ на менее частый вопрос.</p> 
-                    </li>
-                </ul>  
+                    </div>
             </div>
         </div>
         <div class="viewport_border"></div>
@@ -76,19 +75,19 @@
         function setViewportData() {
             $('.viewport_border').attr('text', window.innerWidth + ' x ' + round(Telegram.WebApp.viewportHeight, 2));
             $('.viewport_stable_border').attr('text', window.innerWidth + ' x ' + round(Telegram.WebApp.viewportStableHeight, 2) + ' | is_expanded: ' + (Telegram.WebApp.isExpanded ? 'true' : 'false'));
-            $('.body').attr('style', '' + (Telegram.WebApp.isExpanded ? "background-image: url(img/lightFull.png); background-size: 100% 120vh;" : "background-image: url(img/light.png);"));
-            $('.box').attr('style', '' + (Telegram.WebApp.isExpanded ? 'padding-top: 50px;' : 'padding-top: 0;'));
-            $('.animation').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 100px; margin-bottom: 50px;' : 'margin-top: 0px;'));
+            // $('.body').attr('style', '' + (Telegram.WebApp.isExpanded ? "background-image: url(img/lightFull.png); background-size: 100% 120vh;" : "background-image: url(img/light.png);"));
+            // $('.box').attr('style', '' + (Telegram.WebApp.isExpanded ? 'padding-top: 50px;' : 'padding-top: 0;'));
+            // $('.animation').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 100px; margin-bottom: 50px;' : 'margin-top: 0px;'));
 
-            if (screenHeight > 800){
-                $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 180px;' : 'margin-top: 0px;'));
-            }
-            else if (screenHeight > 760){
-                $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 120px;' : 'margin-top: 0px;'));
-            }
-            else {
-                $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 80px;' : 'margin-top: 0px;'));
-            }
+            // if (screenHeight > 800){
+            //     $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 180px;' : 'margin-top: 0px;'));
+            // }
+            // else if (screenHeight > 760){
+            //     $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 120px;' : 'margin-top: 0px;'));
+            // }
+            // else {
+            //     $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 80px;' : 'margin-top: 0px;'));
+            // }
             
             
         }
