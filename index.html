@@ -21,36 +21,36 @@
                 <h1 class="faq" style="font-size: 40px;">F.A.Q</h1>
             </div>
             <div class="animation">
-                <center><lottie-player src="https://assets1.lottiefiles.com/packages/lf20_wloxwco0.json"  background="transparent"  speed="1"  style="width: 240px; margin: auto;"  loop autoplay></lottie-player></center>
+                <center><lottie-player src="https://assets1.lottiefiles.com/packages/lf20_wloxwco0.json"  background="transparent"  speed="1"  style="width: 220px; margin: auto;"  loop autoplay></lottie-player></center>
             </div>
             <!-- https://assets7.lottiefiles.com/packages/lf20_QPbPfUVWRe.json -->
-            <div class="faq-class" style="margin: auto;">
+            <div class="faq-class" style="margin: auto; max-width: 500px;">
                 <ul style="list-style-type:none;">
-                    <li style="margin-bottom: 10px;">
+                    <li style="margin-bottom: 15px;">
                         <a id='1' href="#">
                             <div  style="display: flex; color: #fff;">
-                                <h6 style="margin:auto; margin-left: 0; margin-right: 5px; font-size: 12px;">Как это работает?</h6>
-                                <img src="img/arrow.svg" style="width:18px; margin: auto; margin-right: 20px;"/>
+                                <h6 id="h61" style="margin:auto; margin-left: 0; margin-right: 5px; font-size: 15px;">Как это работает?</h6>
+                                <img src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 20px;"/>
                             </div>
                         </a>
-                        <p id="11" style="display: none; font-size: 10px;">Примерно так и работает.</p> 
+                        <p id="11" style="display: none; font-size: 12px; font-family: 'Jost', sans-serif; letter-spacing: 2px;">Примерно так и работает.</p> 
                     </li>
-                    <li style="margin-bottom: 10px;">
+                    <li style="margin-bottom: 15px;">
                         <a id='2' href="#">
-                            <div  style="display: flex; color: #fff;">
-                                <h6 style="margin:auto; margin-left: 0; margin-right: 5px; font-size: 12px;">Достаточно большой вопрос?</h6>
-                                <img src="img/arrow.svg" style="width:18px; margin: auto; margin-right: 20px;"/>
+                            <div style="display: flex; color: #fff;">
+                                <h6 id="h62" style="margin:auto; margin-left: 0; margin-right: 5px; font-size: 15px;">Достаточно большой вопрос?</h6>
+                                <img src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 20px;"/>
                             </div>
                         </a>
-                        <p id="21" style="display: none; font-size: 10px;">Ответ на большой вопрос.</p> 
-                    <li style="margin-bottom: 10px;">
+                        <p id="21" style="display: none; font-size: 12px; font-family: 'Jost', sans-serif; letter-spacing: 2px;">Ответ на большой вопрос.</p> 
+                    <li>
                         <a id='3' href="#">
                             <div  style="display: flex; color: #fff;">
-                                <h6 style="margin:auto; margin-left: 0; margin-right: 5px; font-size: 12px;">Не такой частый вопрос?</h6>
-                                <img src="img/arrow.svg" style="width:18px; margin: auto; margin-right: 20px;"/>
+                                <h6 id="h63" style="margin:auto; margin-left: 0; margin-right: 5px; font-size: 15px;">Не такой частый вопрос?</h6>
+                                <img src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 20px;"/>
                             </div>
                         </a>
-                        <p id="31" style="display: none; font-size: 10px;">Ответ на менее частый вопрос.</p> 
+                        <p id="31" style="display: none; font-size: 12px; font-family: 'Jost', sans-serif; letter-spacing: 2px;">Ответ на менее частый вопрос.</p> 
                     </li>
                 </ul>  
             </div>
@@ -97,13 +97,87 @@
         setViewportData();
 
         $( "#1" ).click(function() {
-            $( "#11" ).slideToggle( "fast" );
+            if ($("#21").is(':visible')) {
+                $( "#21" ).slideToggle();
+            }
+            if ($("#31").is(':visible')) {
+                $( "#31" ).slideToggle();
+            }
+            
+            if(!$("#11").is(':visible')){
+                document.getElementById("h62").style.transition = "font 1s";
+                document.getElementById("h62").style.fontSize = "10px";
+
+                document.getElementById("h63").style.transition = "font 1s";
+                document.getElementById("h63").style.fontSize = "10px";
+            }
+            else{
+                document.getElementById("h62").style.transition = "font 1s";
+                document.getElementById("h62").style.fontSize = "15px";
+
+                document.getElementById("h63").style.transition = "font 1s";
+                document.getElementById("h63").style.fontSize = "15px";
+            }
+
+            
+            document.getElementById("h61").style.transition = "font 1s";
+            document.getElementById("h61").style.fontSize = "15px";
+
+            $( "#11" ).slideToggle();
         });
         $( "#2" ).click(function() {
-            $( "#21" ).slideToggle( "fast" );
+            if ($("#11").is(':visible')) {
+                $( "#11" ).slideToggle();
+            }
+            if ($("#31").is(':visible')) {
+                $( "#31" ).slideToggle();
+            }
+
+            if(!$("#21").is(':visible')){
+                document.getElementById("h61").style.transition = "font 1s";
+                document.getElementById("h61").style.fontSize = "10px";
+
+                document.getElementById("h63").style.transition = "font 1s";
+                document.getElementById("h63").style.fontSize = "10px";
+            }
+            else{
+                document.getElementById("h61").style.transition = "font 1s";
+                document.getElementById("h61").style.fontSize = "15px";
+
+                document.getElementById("h63").style.transition = "font 1s";
+                document.getElementById("h63").style.fontSize = "15px";
+            }
+
+            document.getElementById("h62").style.transition = "font 1s";
+            document.getElementById("h62").style.fontSize = "15px";
+            $( "#21" ).slideToggle();
         });
         $( "#3" ).click(function() {
-            $( "#31" ).slideToggle( "fast" );
+            if ($("#21").is(':visible')) {
+                $( "#21" ).slideToggle();
+            }
+            if ($("#11").is(':visible')) {
+                $( "#11" ).slideToggle();
+            }
+
+            if(!$("#31").is(':visible')){
+                document.getElementById("h61").style.transition = "font 1s";
+                document.getElementById("h61").style.fontSize = "10px";
+
+                document.getElementById("h62").style.transition = "font 1s";
+                document.getElementById("h62").style.fontSize = "10px";
+            }
+            else{
+                document.getElementById("h61").style.transition = "font 1s";
+                document.getElementById("h61").style.fontSize = "15px";
+
+                document.getElementById("h62").style.transition = "font 1s";
+                document.getElementById("h62").style.fontSize = "15px";
+            }
+
+            document.getElementById("h63").style.transition = "font 1s";
+            document.getElementById("h63").style.fontSize = "15px";
+            $( "#31" ).slideToggle();
         });
 
     </script>
