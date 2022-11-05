@@ -21,36 +21,36 @@
                 <h1 class="faq">F.A.Q</h1>
             </div>
             <div class="animation">
-                <center><lottie-player src="https://assets1.lottiefiles.com/packages/lf20_wloxwco0.json"  background="transparent"  speed="1"  style="width: 220px; margin: auto;"  loop autoplay></lottie-player></center>
+                <center><lottie-player src="https://assets1.lottiefiles.com/packages/lf20_wloxwco0.json"  background="transparent"  speed="1"  style="width: 210px; margin: auto;"  loop autoplay></lottie-player></center>
             </div>
             <!-- https://assets7.lottiefiles.com/packages/lf20_QPbPfUVWRe.json -->
             <div class="faq-class" style="margin: auto; margin-left: 20px; margin-right: 20px; max-width: 400px;">
                     <div style="margin-bottom: 15px;">
                         <a id='1' href="#">
-                            <div  style="height: 35px; display: flex; color: #fff; border-radius: 10px; background-image: linear-gradient(138deg, rgba(170,62,166,0.6) 0%, rgba(87,170,211,0.6) 100%);">
-                                <h6 id="h61" style="margin:auto; margin-left: 5px; font-size: 12pt; font-family: 'Comfortaa', cursive;">Как это работает?</h6>
-                                <img src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 5px;"/>
+                            <div id="d1" style="height: 35px; display: flex; color: #fff; border-radius: 10px; background-image: linear-gradient(138deg, rgba(170,62,166,0.6) 0%, rgba(87,170,211,0.6) 100%);">
+                                <h6 id="h61" style="margin:auto; margin-left: 5px; font-size: 12pt; font-family: 'Comfortaa', cursive;">Ваши курсы аманат?</h6>
+                                <img id="img1" src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 5px;"/>
                             </div>
                         </a>
-                        <p id="11" style="display: none; font-size: 12px; font-family: 'Comfortaa', cursive; letter-spacing: 1px;">Примерно так и работает.</p> 
+                        <p id="11" style="display: none; font-size: 12px; font-family: 'Comfortaa', cursive; letter-spacing: 1px;">Да, вы можете изучать наши курсы только с женой/мужем и детьми!</p> 
                     </div>
                     <div style="margin-bottom: 15px;">
                         <a id='2' href="#">
-                            <div style="height: 35px; display: flex; color: #fff; border-radius: 10px; background-image: linear-gradient(138deg, rgba(170,62,166,0.6) 0%, rgba(87,170,211,0.6) 100%);">
-                                <h6 id="h62" style="margin:auto; margin-left: 5px; font-size: 12pt; font-family: 'Comfortaa', cursive;">Достаточно большой вопрос?</h6>
-                                <img src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 5px;"/>
+                            <div id="d2" style="height: 35px; display: flex; color: #fff; border-radius: 10px; background-image: linear-gradient(138deg, rgba(170,62,166,0.6) 0%, rgba(87,170,211,0.6) 100%);">
+                                <h6 id="h62" style="margin:auto; margin-left: 5px; font-size: 12pt; font-family: 'Comfortaa', cursive;">Какой курс мне посоветуете?</h6>
+                                <img id="img2" src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 5px;"/>
                             </div>
                         </a>
-                        <p id="21" style="display: none; font-size: 12px; font-family: 'Comfortaa', cursive; letter-spacing: 1px;">Ответ на большой вопрос.</p>
+                        <p id="21" style="display: none; font-size: 12px; font-family: 'Comfortaa', cursive; letter-spacing: 1px;">Если вы новичок - начните с бонусного курса по криптологии.</p>
                     </div>
                     <div>
                         <a id='3' href="#">
-                            <div  style="height: 35px; display: flex; color: #fff; border-radius: 10px; background-image: linear-gradient(138deg, rgba(170,62,166,0.6) 0%, rgba(87,170,211,0.6) 100%);">
-                                <h6 id="h63" style="margin:auto; margin-left: 5px; font-size: 12pt; font-family: 'Comfortaa', cursive;">Не такой частый вопрос?</h6>
-                                <img src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 5px;"/>
+                            <div  id="d3" style="height: 35px; display: flex; color: #fff; border-radius: 10px; background-image: linear-gradient(138deg, rgba(170,62,166,0.6) 0%, rgba(87,170,211,0.6) 100%);">
+                                <h6 id="h63" style="margin:auto; margin-left: 5px; font-size: 12pt; font-family: 'Comfortaa', cursive;">А рассрочка есть?</h6>
+                                <img id="img3" src="img/arrow.svg" style="width:25px; margin: auto; margin-right: 5px;"/>
                             </div>
                         </a>
-                        <p id="31" style="display: none; font-size: 12px; font-family: 'Comfortaa', cursive; letter-spacing: 1px;">Ответ на менее частый вопрос.</p> 
+                        <p id="31" style="display: none; font-size: 12px; font-family: 'Comfortaa', cursive; letter-spacing: 1px;">Есть, но не на каждый курс, напишите нам - поможем!</p> 
                     </div>
             </div>
         </div>
@@ -75,19 +75,19 @@
         function setViewportData() {
             $('.viewport_border').attr('text', window.innerWidth + ' x ' + round(Telegram.WebApp.viewportHeight, 2));
             $('.viewport_stable_border').attr('text', window.innerWidth + ' x ' + round(Telegram.WebApp.viewportStableHeight, 2) + ' | is_expanded: ' + (Telegram.WebApp.isExpanded ? 'true' : 'false'));
-            $('.body').attr('style', '' + (Telegram.WebApp.isExpanded ? "background-image: url(img/lightFull.png); background-size: 100% 120vh;" : "background-image: url(img/light.png);"));
-            $('.box').attr('style', '' + (Telegram.WebApp.isExpanded ? 'padding-top: 50px;' : 'padding-top: 0;'));
-            $('.animation').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 100px; margin-bottom: 50px;' : 'margin-top: 0px;'));
+            // $('.body').attr('style', '' + (Telegram.WebApp.isExpanded ? "background-image: url(img/lightFull.png); background-size: 100% 120vh;" : "background-image: url(img/light.png);"));
+            // $('.box').attr('style', '' + (Telegram.WebApp.isExpanded ? 'padding-top: 50px;' : 'padding-top: 0;'));
+            // $('.animation').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 100px; margin-bottom: 50px;' : 'margin-top: 0px;'));
 
-            if (screenHeight > 800){
-                $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 180px;' : 'margin-top: 0px;'));
-            }
-            else if (screenHeight > 760){
-                $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 120px;' : 'margin-top: 0px;'));
-            }
-            else {
-                $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 80px;' : 'margin-top: 0px;'));
-            }
+            // if (screenHeight > 800){
+            //     $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 180px;' : 'margin-top: 0px;'));
+            // }
+            // else if (screenHeight > 760){
+            //     $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 120px;' : 'margin-top: 0px;'));
+            // }
+            // else {
+            //     $('.support_btn').attr('style', '' + (Telegram.WebApp.isExpanded ? 'margin-top: 80px;' : 'margin-top: 0px;'));
+            // }
             
             
         }
@@ -104,23 +104,43 @@
             }
             
             if(!$("#11").is(':visible')){
-                document.getElementById("h62").style.transition = "font 1s";
+                document.getElementById("h62").style.transition = "font 0.5s";
                 document.getElementById("h62").style.fontSize = "10px";
+                document.getElementById("d2").style.transition = "font 0.5s";
+                document.getElementById("d2").style.height = "15px";
+                document.getElementById("img2").style.transition = "font 0.5s";
+                document.getElementById("img2").style.width = "13px";
 
-                document.getElementById("h63").style.transition = "font 1s";
+                document.getElementById("h63").style.transition = "font 0.5s";
                 document.getElementById("h63").style.fontSize = "10px";
+                document.getElementById("d3").style.transition = "font 0.5s";
+                document.getElementById("d3").style.height = "15px";
+                document.getElementById("img3").style.transition = "font 0.5s";
+                document.getElementById("img3").style.width = "13px";
             }
             else{
-                document.getElementById("h62").style.transition = "font 1s";
+                document.getElementById("h62").style.transition = "font 0.5s";
                 document.getElementById("h62").style.fontSize = "12pt";
+                document.getElementById("d2").style.transition = "font 0.5s";
+                document.getElementById("d2").style.height = "35px";
+                document.getElementById("img2").style.transition = "font 0.5s";
+                document.getElementById("img2").style.width = "25px";
 
-                document.getElementById("h63").style.transition = "font 1s";
+                document.getElementById("h63").style.transition = "font 0.5s";
                 document.getElementById("h63").style.fontSize = "12pt";
+                document.getElementById("d3").style.transition = "font 0.5s";
+                document.getElementById("d3").style.height = "35px";
+                document.getElementById("img3").style.transition = "font 0.5s";
+                document.getElementById("img3").style.width = "25px";
             }
 
             
-            document.getElementById("h61").style.transition = "font 1s";
+            document.getElementById("h61").style.transition = "font 0.5s";
             document.getElementById("h61").style.fontSize = "12pt";
+            document.getElementById("d1").style.transition = "font 0.5s";
+            document.getElementById("d1").style.height = "35px";
+            document.getElementById("img1").style.transition = "font 0.5s";
+            document.getElementById("img1").style.width = "25px";
 
             $( "#11" ).slideToggle();
         });
@@ -133,22 +153,42 @@
             }
 
             if(!$("#21").is(':visible')){
-                document.getElementById("h61").style.transition = "font 1s";
+                document.getElementById("h61").style.transition = "font 0.5s";
                 document.getElementById("h61").style.fontSize = "10px";
+                document.getElementById("d1").style.transition = "font 0.5s";
+                document.getElementById("d1").style.height = "15px";
+                document.getElementById("img1").style.transition = "font 0.5s";
+                document.getElementById("img1").style.width = "13px";
 
-                document.getElementById("h63").style.transition = "font 1s";
+                document.getElementById("h63").style.transition = "font 0.5s";
                 document.getElementById("h63").style.fontSize = "10px";
+                document.getElementById("d3").style.transition = "font 0.5s";
+                document.getElementById("d3").style.height = "15px";
+                document.getElementById("img3").style.transition = "font 0.5s";
+                document.getElementById("img3").style.width = "13px";
             }
             else{
-                document.getElementById("h61").style.transition = "font 1s";
+                document.getElementById("h61").style.transition = "font 0.5s";
                 document.getElementById("h61").style.fontSize = "12pt";
+                document.getElementById("d1").style.transition = "font 0.5s";
+                document.getElementById("d1").style.height = "35px";
+                document.getElementById("img1").style.transition = "font 0.5s";
+                document.getElementById("img1").style.width = "25px";
 
-                document.getElementById("h63").style.transition = "font 1s";
+                document.getElementById("h63").style.transition = "font 0.5s";
                 document.getElementById("h63").style.fontSize = "12pt";
+                document.getElementById("d3").style.transition = "font 0.5s";
+                document.getElementById("d3").style.height = "35px";
+                document.getElementById("img3").style.transition = "font 0.5s";
+                document.getElementById("img3").style.width = "25px";
             }
 
             document.getElementById("h62").style.transition = "font 1s";
             document.getElementById("h62").style.fontSize = "12pt";
+            document.getElementById("d2").style.transition = "font 0.5s";
+            document.getElementById("d2").style.height = "35px";
+            document.getElementById("img2").style.transition = "font 0.5s";
+            document.getElementById("img2").style.width = "25px";
             $( "#21" ).slideToggle();
         });
         $( "#3" ).click(function() {
@@ -160,22 +200,42 @@
             }
 
             if(!$("#31").is(':visible')){
-                document.getElementById("h61").style.transition = "font 1s";
+                document.getElementById("h61").style.transition = "font 0.5s";
                 document.getElementById("h61").style.fontSize = "10px";
+                document.getElementById("d1").style.transition = "font 0.5s";
+                document.getElementById("d1").style.height = "15px";
+                document.getElementById("img1").style.transition = "font 0.5s";
+                document.getElementById("img1").style.width = "13px";
 
-                document.getElementById("h62").style.transition = "font 1s";
+                document.getElementById("h62").style.transition = "font 0.5s";
                 document.getElementById("h62").style.fontSize = "10px";
+                document.getElementById("d2").style.transition = "font 0.5s";
+                document.getElementById("d2").style.height = "15px";
+                document.getElementById("img2").style.transition = "font 0.5s";
+                document.getElementById("img2").style.width = "13px";
             }
             else{
-                document.getElementById("h61").style.transition = "font 1s";
+                document.getElementById("h61").style.transition = "font 0.5s";
                 document.getElementById("h61").style.fontSize = "12pt";
+                document.getElementById("d1").style.transition = "font 0.5s";
+                document.getElementById("d1").style.height = "35px";
+                document.getElementById("img1").style.transition = "font 0.5s";
+                document.getElementById("img1").style.width = "25px";
 
-                document.getElementById("h62").style.transition = "font 1s";
+                document.getElementById("h62").style.transition = "font 0.5s";
                 document.getElementById("h62").style.fontSize = "12pt";
+                document.getElementById("d2").style.transition = "font 0.5s";
+                document.getElementById("d2").style.height = "35px";
+                document.getElementById("img2").style.transition = "font 0.5s";
+                document.getElementById("img2").style.width = "25px";
             }
 
-            document.getElementById("h63").style.transition = "font 1s";
+            document.getElementById("h63").style.transition = "font 0.5s";
             document.getElementById("h63").style.fontSize = "12pt";
+            document.getElementById("d3").style.transition = "font 0.5s";
+            document.getElementById("d3").style.height = "35px";
+            document.getElementById("img3").style.transition = "font 0.5s";
+            document.getElementById("img3").style.width = "25px";
             $( "#31" ).slideToggle();
         });
 
